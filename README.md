@@ -29,25 +29,25 @@ Este proyecto es una aplicación Django que permite la gestión de perfiles de u
 
 3. Configura la base de datos en config/database.yml:
 
-  ```yaml
-  default: &default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  username: your_username
-  password: your_password
+    ```yaml
+    default: &default
+    adapter: postgresql
+    encoding: unicode
+    pool: 5
+    username: your_username
+    password: your_password
 
-development:
-  <<: *default
-  database: your_database_name
+    development:
+    <<: *default
+    database: your_database_name
 
-test:
-  <<: *default
-  database: your_database_name_test
+    test:
+    <<: *default
+    database: your_database_name_test
 
-production:
-  <<: *default
-  database: your_database_name_production
+    production:
+    <<: *default
+    database: your_database_name_production
 
 4. Realiza las migraciones de la base de datos:
      ```sh
