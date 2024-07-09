@@ -13,6 +13,6 @@ from celery.schedules import crontab
 app.conf.beat_schedule = {
     'descargar-documento-cada-dia': {
         'task': 'mi_app.tasks.tarea_descargar_documento_dane',
-        'schedule': crontab(hour=0, minute=0),  # Esto ejecuta la tarea todos los días a medianoche
+        'schedule': crontab(hour=0, minute=0), 
     },
 }
