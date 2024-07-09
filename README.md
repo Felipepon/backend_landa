@@ -21,12 +21,15 @@ Este proyecto es una aplicación Django que permite la gestión de perfiles de u
    cd myproject
 
 2. Crea un entorno virtual e instala las dependencias:
+
+    ```sh
     python -m venv env
     source env/bin/activate
     pip install -r requirements.txt
 
 3. Configura la base de datos en config/database.yml:
 
+  ```yaml
   default: &default
   adapter: postgresql
   encoding: unicode
@@ -47,15 +50,17 @@ production:
   database: your_database_name_production
 
 4. Realiza las migraciones de la base de datos:
-
+     ```sh
     python manage.py makemigrations
     python manage.py migrate
 
 5. Crea un superusuario para acceder al admin de Django:
 
+    ```sh
     python manage.py createsuperuser
 
 6. Inicia el servidor de desarrollo:
 
+    ```sh
     python manage.py runserver
 
