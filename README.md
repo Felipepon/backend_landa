@@ -64,3 +64,24 @@ Este proyecto es una aplicación Django que permite la gestión de perfiles de u
     ```sh
     python manage.py runserver
 
+
+7. Asegúrate de que Redis esté corriendo:
+
+    ```sh
+    redis-server
+
+8. Inicia los workers de Celery:
+
+    ```sh
+    celery -A tu_proyecto beat --loglevel=info
+
+9. Inicia el beat scheduler de Celery:
+
+    ```sh
+    celery -A tu_proyecto beat --loglevel=info
+
+
+
+Este `README.md` te proporcionará una guía clara sobre cómo instalar, configurar y ejecutar el proyecto.
+
+    
